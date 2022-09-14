@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=" utf-8">
+        <meta name="viewport" content="width= device-width, initial-scale=1">
+        <link href= link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel=" stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+        <title>Kalyna Hotel</title>
+    </head>
+
+ <body>
+
+    <!-- Svg Sprite -->
+
+ <svg style=" display: none;">
+    <symbol id="facebook" viewBox="0 0 50 50">
+        <g><path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 26.580078 10 C 23.92822 10 21.917076 10.867217 20.677734 12.400391 C 19.438393 13.933564 19 15.981046 19 18.226562 L 19 20 L 17 20 A 1.0001 1.0001 0 0 0 16 21 L 16 26 A 1.0001 1.0001 0 0 0 17 27 L 19 27 L 19 39 A 1.0001 1.0001 0 0 0 20 40 L 26 40 A 1.0001 1.0001 0 0 0 27 39 L 27 27 L 31 27 A 1.0001 1.0001 0 0 0 31.980469 26.195312 L 32.980469 21.195312 A 1.0001 1.0001 0 0 0 32 20 L 27 20 L 27 17.806641 C 27 17.321617 27.03137 17.325614 27.171875 17.234375 C 27.312385 17.143136 27.820197 17 28.710938 17 L 32 17 A 1.0001 1.0001 0 0 0 33 16 L 33 12 A 1.0001 1.0001 0 0 0 32.335938 11.058594 C 32.335938 11.058594 29.456337 10 26.580078 10 z M 26.580078 12 C 28.472499 12 30.227501 12.510447 31 12.751953 L 31 15 L 28.710938 15 C 27.663677 15 26.813974 15.08458 26.083984 15.558594 C 25.353995 16.032605 25 16.940664 25 17.806641 L 25 21 A 1.0001 1.0001 0 0 0 26 22 L 30.779297 22 L 30.179688 25 L 26 25 A 1.0001 1.0001 0 0 0 25 26 L 25 38 L 21 38 L 21 26 A 1.0001 1.0001 0 0 0 20 25 L 18 25 L 18 22 L 20 22 A 1.0001 1.0001 0 0 0 21 21 L 21 18.226562 C 21 16.24708 21.405014 14.681779 22.232422 13.658203 C 23.05983 12.634627 24.336936 12 26.580078 12 z"/></g>
+     </symbol>
+     <symbol id="instagram" viewBox="0 0 50 50" >
+         <g><path d="M 12 3 C 7.0414839 3 3 7.0414839 3 12 L 3 38 C 3 42.958516 7.0414839 47 12 47 L 38 47 C 42.958516 47 47 42.958516 47 38 L 47 12 C 47 7.0414839 42.958516 3 38 3 L 12 3 z M 12 5 L 38 5 C 41.877484 5 45 8.1225161 45 12 L 45 38 C 45 41.877484 41.877484 45 38 45 L 12 45 C 8.1225161 45 5 41.877484 5 38 L 5 12 C 5 8.1225161 8.1225161 5 12 5 z M 38 7 C 36.904545 7 36 7.9045455 36 9 L 36 12 C 36 13.095455 36.904545 14 38 14 L 41 14 C 42.095455 14 43 13.095455 43 12 L 43 9 C 43 7.9045455 42.095455 7 41 7 L 38 7 z M 38 9 L 41 9 L 41 12 L 38 12 L 38 9 z M 25 12 C 21.331661 12 18.01623 13.540914 15.648438 16 L 8 16 A 1.0001 1.0001 0 0 0 7 17 L 7 37 C 7 40.301625 9.6983746 43 13 43 L 37 43 C 40.301625 43 43 40.301625 43 37 L 43 17 A 1.0001 1.0001 0 0 0 42 16 L 34.351562 16 C 31.98377 13.540914 28.668339 12 25 12 z M 25 14 C 31.073477 14 36 18.926523 36 25 C 36 31.073477 31.073477 36 25 36 C 18.926523 36 14 31.073477 14 25 C 14 18.926523 18.926523 14 25 14 z M 25 16 A 1.0001 1.0001 0 0 0 24.589844 16.083984 C 19.831681 16.311415 16 20.186041 16 25 C 16 29.959394 20.041635 34 25 34 C 29.958365 34 34 29.959394 34 25 C 34 20.187371 30.170385 16.313404 25.414062 16.083984 A 1.0001 1.0001 0 0 0 25 16 z M 9 18 L 14.068359 18 C 12.766308 20.024088 12 22.423973 12 25 C 12 32.158523 17.841477 38 25 38 C 32.158523 38 38 32.158523 38 25 C 38 22.423973 37.233692 20.024088 35.931641 18 L 41 18 L 41 37 C 41 39.220375 39.220375 41 37 41 L 13 41 C 10.779625 41 9 39.220375 9 37 L 9 18 z M 25 18 C 28.877635 18 32 21.121394 32 25 C 32 28.878606 28.877635 32 25 32 C 21.122365 32 18 28.878606 18 25 C 18 21.121394 21.122365 18 25 18 z"/></g>
+     </symbol>
+      <symbol id="linkedin" viewBox="0 0 30 30">
+          <g> <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M10.496,8.403 c0.842,0,1.403,0.561,1.403,1.309c0,0.748-0.561,1.309-1.496,1.309C9.561,11.022,9,10.46,9,9.712C9,8.964,9.561,8.403,10.496,8.403z M12,20H9v-8h3V20z M22,20h-2.824v-4.372c0-1.209-0.753-1.488-1.035-1.488s-1.224,0.186-1.224,1.488c0,0.186,0,4.372,0,4.372H14v-8 h2.918v1.116C17.294,12.465,18.047,12,19.459,12C20.871,12,22,13.116,22,15.628V20z"/></g>
+      </symbol>
+
+ </svg>
+
+    <!----- Header----->
+
+
+<header class="header" id="header">
+     <div class="container">
+         <div class="header_inner">
+            <div class="intro_logo">
+                    <img src="img/img_kalyna.jpg" alt="fff">
+            </div>
+
+                 <nav class="nav" id="nav">
+                    <a class="nav_link" href="#" data-scroll="#room">Номери</a>
+                    <a class="nav_link" href="#" data-scroll="#comfort">Загальна інформація</a>
+                    <a class="nav_link" href="#" data-scroll="#gallary">Фотогалерея</a>
+                    <a class="nav_link" href="#" data-scroll="#restaurant">Ресторан</a>
+                    <a class="nav_link" href="#" data-scroll="#footer">Контакти</a>
+                </nav>
+
+                <buttom class="burger" type="buuton" id="navToggle">
+                    <span class="burger_item"></span>
+                </buttom>
+         </div>
+
+     </div> <!-----/ Containerr----->
+ </header> <!-----/ Header----->
+
+
+    <!----- Inner----->
+
+<div class="intro" id="intro">
+    <div class="container">
+          <div class="intro_text">
+                <div class="intro_title">готельний-ресторанний комплекс </div>
+                <div class="intro_subtitle">Kalyna</div>
+                <div class="intro_photo">
+                </div>
+          </div>
+
+               <div class="intro_information">
+                    <h1 class="inf_title">
+                        Наші номери
+                    </h1>
+                    <h3 class="inf_subtitle">
+                        <p>Ми пропонуємо Вам 6 типів номерів. Всі наші номери обладнані</p>
+                        <p>ванними кімнатами і wi-fi.</p>
+                    </h3>
+               </div>
+    </div><!----- /Container----->
+  </div> <!----- /Inner----->
+
+
+  <!----- Room----->
+
+
+  <div class="room" id="room">
+      <div class="container">
+
+            <div class="slider">
+                <div class="slider_item">
+                     <img src="img/room/room1.jpg" alt="#">
+                 </div>
+                    <div class="slider_item">
+                         <img src="img/room/room1.jpg" alt="#">
+                        </div>
+                </div>
+
+        <div class="room_item">
+
+                <div class="room_information">
+                    <div class="room_title"> Стандартний одномістний номер</div>
+                    <div class="room_number"> Макс. кількість: 1 чоловік</div>
+                    <div class="room_price"> 900 uah</div>
+                    <div class="room_info"> Розмір - 17 кв.м. <br>Номер обладнаний телевізором, шкафом для одягу та ванною кімнатою з капцями. </div>
+                    <div class="room_service"> Послуги та зручності:
+                        <url>
+                            <li>Міні-бар</li>
+                            <li>Сейф</li>
+                            <li>Кондиціонер</li>
+                            <li>Робочий стіл</li>
+                            <li>Електрочайник</li>
+                            <li>Фен</li>
+                        </url>
+                        <a class="btn btn--red btn--long" href="#">Забронювати</a>
+                    </div>
+                </div>
+              </div>
+
+              <div class="slider">
+                <div class="slider_item">
+                     <img src="img/room/room_2.2.jpg" alt="#">
+                 </div>
+                    <div class="slider_item">
+                         <img src="img/room/room_2.2.jpg" alt="#">
+                        </div>
+                </div>
+
+            <div class="room_item">
+                <div class="room_information">
+                 <div class="room_title"> Стандартний двомістний номер з двума окремими ліжками</div>
+                 <div class="room_number"> Макс. кількість: 2 чоловік</div>
+                 <div class="room_price"> 1100 uah</div>
+                 <div class="room_info"> Розмір - 23 кв.м. <br>Номер обладнаний телевізором, шкафом для одягу та ванною кімнатою з капцями. </div>
+                 <div class="room_service"> Послуги та зручності:
+                    <url>
+                        <li>Міні-бар</li>
+                        <li>Сейф</li>
+                        <li>Кондиціонер</li>
+                        <li>Робочий стіл</li>
+                        <li>Електрочайник</li>
+                        <li>Фен</li>
+                    </url>
+                    <a class="btn btn--red btn--long" href="#">Забронювати</a>
+                 </div>
+                </div>
+            </div>
+
+
+                <div class="slider">
+                    <div class="slider_item">
+                         <img src="img/room/room_2.jpg" alt="#">
+                     </div>
+                        <div class="slider_item">
+                             <img src="img/room/room_2.jpg" alt="#">
+                            </div>
+                        </div>
+
+        <div class="room_item">
+
+            <div class="room_information">
+                <div class="room_title"> Покращений двомістний номер з одним ліжком</div>
+                <div class="room_number"> Макс. кількість: 2 чоловік</div>
+                <div class="room_price"> 1100 uah</div>
+                <div class="room_info"> Розмір - 23 кв.м. <br>Номер обладнаний телевізором, шкафом для одягу та ванною кімнатою з капцями. </div>
+                <div class="room_service"> Послуги та зручності:
+                    <url>
+                        <li>Міні-бар</li>
+                        <li>Сейф</li>
+                        <li>Кондиціонер</li>
+                        <li>Робочий стіл</li>
+                        <li>Електрочайник</li>
+                        <li>Фен</li>
+                    </url>
+                    <a class="btn btn--red btn--long" href="#">Забронювати</a>
+                </div>
+             </div>
+         </div>
+
+         <div class="slider">
+            <div class="slider_item">
+                 <img src="img/room/room3.jpg" alt="#">
+             </div>
+                <div class="slider_item">
+                     <img src="img/room/room3.jpg" alt="#">
+                    </div>
+                </div>
+         <div class="room_item">
+
+            <div class="room_information">
+                <div class="room_title"> Трьохмістий номер з трьома окремими ліжками</div>
+                <div class="room_number"> Макс. кількість: 3 чоловік</div>
+                <div class="room_price"> 1440 uah</div>
+                <div class="room_info"> Розмір - 27 кв.м. <br>Номер обладнаний телевізором, шкафом для одягу та ванною кімнатою з капцями. </div>
+                <div class="room_service"> Послуги та зручності:
+                    <url>
+                        <li>Міні-бар</li>
+                        <li>Сейф</li>
+                        <li>Кондиціонер</li>
+                        <li>Робочий стіл</li>
+                        <li>Електрочайник</li>
+                        <li>Фен</li>
+                    </url>
+                    <a class="btn btn--red btn--long" href="#">Забронювати</a>
+                 </div>
+             </div>
+         </div>
+
+         <div class="slider">
+            <div class="slider_item">
+                 <img src="img/room/room-studio.jpg" alt="#">
+             </div>
+                <div class="slider_item">
+                     <img src="img/room//room-studio.jpg" alt="#">
+                    </div>
+                </div>
+
+         <div class="room_item">
+
+            <div class="room_information">
+                <div class="room_title"> Номер-студіо з одним ліжком</div>
+                <div class="room_number"> Макс. кількість: 2 чоловік</div>
+                <div class="room_price"> 1250 uah</div>
+                <div class="room_info"> Розмір - 33 кв.м. <br>Номер обладнаний телевізором, шкафом для одягу та ванною кімнатою з капцями. </div>
+                <div class="room_service"> Послуги та зручності:
+                    <url>
+                        <li>Міні-бар</li>
+                        <li>Диван</li>
+                        <li>Барна стійка</li>
+                        <li>Сейф</li>
+                        <li>Кондиціонер</li>
+                        <li>Робочий стіл</li>
+                        <li>Електрочайник</li>
+                        <li>Фен</li>
+                    </url>
+                    <a class="btn btn--red btn--long" href="#">Забронювати</a>
+                 </div>
+             </div>
+         </div>
+
+         <div class="slider">
+            <div class="slider_item">
+                 <img src="img/room/room_lux2.jpg" alt="#">
+             </div>
+                <div class="slider_item">
+                     <img src="img/room/room_lux2.jpg" alt="#">
+                    </div>
+                </div>
+
+         <div class="room_item">
+
+            <div class="room_information">
+                <div class="room_title"> Номер люкс з одним ліжком</div>
+                <div class="room_number"> Макс. кількість: 3 чоловік</div>
+                <div class="room_price"> 1500 uah</div>
+                <div class="room_info"> Розмір - 47 кв.м. <br>Номер складається з двух кімнат. Обладнаний телевізором, шкафом для одягу та ванною кімнатою з капцями. </div>
+                <div class="room_service">
+
+                        <h3>Послуги та зручності:</h3>
+                        <url>
+                        <li>Міні-бар</li>
+                        <li>Диван</li>
+                        <li>Барна стійка</li>
+                        <li>Сейф</li>
+                        <li>Кондиціонер</li>
+                        <li>Робочий стіл</li>
+                        <li>Фен</li>
+                         </url>
+
+                    <a class="btn btn--red btn--long" href="#">Забронювати</a>
+                 </div>
+             </div>
+         </div>
+         <img class="photo_resepcion" src="img/service/resepcion.jpg">
+
+
+            </div>
+        </div> <!----- /Container----->
+  </div> <!-----/ Room----->
+
+
+     <!----- Comfort----->
+
+
+        <div class="container">
+             <div class="comfort" id="comfort">
+                    <div class="comfort_item">
+                        <img class="comfort_icon" src="img/service/wifi.png">
+                        <h4 class="comfort_title">WIFI</h4>
+                        <div class="comfort_text">Безкоштовний вайфай на території та літній терасі
+                        </div>
+                     </div>
+
+                     <div class="comfort_item">
+                        <img class="comfort_icon" src="img/service/transfer.png">
+                        <h4 class="comfort_title">Трансфер</h4>
+                        <div class="comfort_text">Швидко та комфортно від/до аеропорта
+                        </div>
+                     </div>
+
+                     <div class="comfort_item">
+                        <img class="comfort_icon" src="img/service/parking.png">
+                        <h4 class="comfort_title">Парковка</h4>
+                        <div class="comfort_text">Усім постояльцям доступна парковка, що охороняється
+                        </div>
+                     </div>
+
+                    <div class="comfort_item">
+                    <img class="comfort_icon" src="img/service/meeting.png">
+                        <h4 class="comfort_title">Конференц-зал</h4>
+                        <div class="comfort_text"> Місце, де Ви можете провести діловий захід
+                        </div>
+                    </div>
+                    <div class="comfort_item">
+                        <img class="comfort_icon" src="img/service/bags.png">
+                            <h4 class="comfort_title">Багаж</h4>
+                            <div class="comfort_text">У разі необхідності зберігання Вашого багажу є багажна кімната
+                            </div>
+                        </div>
+                        <div class="comfort_item">
+                            <img class="comfort_icon" src="img/service/brakfest.png">
+                                <h4 class="comfort_title">Сніданок</h4>
+                                <div class="comfort_text">Смачний cніданок або дорожній Lunch Box включено у вартість всіх номерів
+                                </div>
+                            </div>
+                            <div class="comfort_item">
+                                <img class="comfort_icon" src="img/service/icon_24h.png">
+                                    <h4 class="comfort_title">Цілодобова робота</h4>
+                                    <div class="comfort_text">Готель працює для Вас цілодобово 7 днів на тиждень
+                                    </div>
+                                </div>
+                                <div class="comfort_item">
+                                    <img class="comfort_icon" src="img/service/rest.png">
+                                        <h4 class="comfort_title">Ресторан</h4>
+                                        <div class="comfort_text">
+                                            У меню ви знайдете страви європейської кухні
+                                        </div>
+                                    </div>
+
+                </div>     <!-----// Comfort----->
+         </div>     <!-----// Container----->
+
+
+
+    <!-----Gallery----->
+
+     <div class="container">
+       <div class="gallary" id="gallary">
+
+        <div class="container">
+         <div class="slider">
+                <div class="slider_item">
+                     <img src="img/newgallery/1.png" alt="#">
+                 </div>
+                    <div class="slider_item">
+                         <img src="img/newgallery/10 (2) (1).png" alt="#">
+                        </div>
+                        <div class="slider_item">
+                            <img src="img/newgallery/14.png" alt="#">
+                           </div>
+                           <div class="slider_item">
+                            <img src="img/newgallery/2.png" alt="#">
+                           </div>
+                           <div class="slider_item">
+                            <img src="img/newgallery/21.png" alt="#">
+                           </div>
+                           <div class="slider_item">
+                            <img src="img/newgallery/3.png" alt="#">
+                           </div>
+                           <div class="slider_item">
+                            <img src="img/newgallery/6 (2).png" alt="#">
+                           </div>
+                           <div class="slider_item">
+                            <img src="img/newgallery/4.jpg" alt="#">
+                           </div>
+                           <div class="slider_item">
+                            <img src="img/newgallery/6.png" alt="#">
+                           </div>
+                           <div class="slider_item">
+                            <img src="img/newgallery/7 (2).png" alt="#">
+                           </div>
+                           <div class="slider_item">
+                            <img src="img/newgallery/8 (2).png" alt="#">
+                           </div>
+                     </div>
+                  </div>
+
+             </div><!----- // Gallery----->
+         </div> <!-----//  COntainer----->
+
+
+
+ <!-----Restaurant----->
+
+
+
+ <div class="container">
+    <div class="restaurant" id="restaurant">
+                    <div class="restaurant_item">
+                     <div class="restaurant_text">
+                        <div class="restaurant_subtitile"> HOTEL AND RESTAURANT COMPLEX "KALYNA"</div>
+                        <a class="btn btn--red btn--long" href="#">Ресторан "КАЛИНА"</a>
+                        </div>
+                    </div>
+                        <div class="restaurant_item">
+                        <img class="photo_rest" src="img/photogallery/restaurant.jpg">
+                     </div>
+    </div>
+</div>
+
+
+
+ <!-----Footer----->
+
+
+ <footer class="footer" id="footer">
+     <div class="container">
+         <div class="footer_inner">
+             <div class="footer_block">
+
+                <h4 class="footer_title">
+                    Адреса:
+                </h4>
+                <address class="footer_addres">
+                   <p>м. Харків</p>
+                    <p>вул. Нестерова 2</p>
+                </address>
+
+             </div>
+
+             <div class="footer_block">
+                <h3 class="footer_phone_title" > Номер телефону:</h3>
+                <span>
+                    <a class="footer_phone" href=”tel:+380577164060”>+38(057)716-40-60
+                    </a>
+                    </span>
+             </div>
+
+
+             <div class="footer_block">
+                    <div class="social social--footer">
+                        <a class="social_item"  href="https://www.facebook.com/otelkalyna"  target="_blank">
+                            <svg class="social_icon">
+                                 <use xlink:href="#facebook"></use>
+                             </svg>
+                        </a>
+
+                        <a class="social_item" href="https://www.instagram.com/hotelkalyna/" target="_blank">
+                             <svg class="social_icon">
+                                <use xlink:href="#instagram"></use>
+                             </svg>
+                        </a>
+                    </div>
+             </div>
+
+     </div> <!-----//  COntainer----->
+ </footer> <!-----//  Footer----->
+
+
+
+
+
+
+
+
+<!-- Javascript -->
+
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="app.js"></script>
+
+
+
+
+
+
+
+
+
+ </body> <!-----/ Body----->
+ </html> <!-----/ Html----->
